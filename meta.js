@@ -19,7 +19,7 @@ module.exports = {
       type: 'string',
       require: false,
       message: 'Project description',
-      default: 'A Vue.js project'
+      default: 'A Vue Component Project'
     },
 
     author: {
