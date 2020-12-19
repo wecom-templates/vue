@@ -7,7 +7,6 @@ module.exports = {
   entry: './src/index.js',
 
   output: {
-    publicPath: __dirname + "/esm/",
     path: path.resolve(__dirname, 'esm'),
     filename: 'component.js'
   },
