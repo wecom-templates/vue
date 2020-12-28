@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="example"> hello world </p>
-    <p>this is a demo component</p>
+    <p>this is a simple demo</p>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .example {
-  color: red;
+  color: yellow;
   font-weight: bold;
 }
 </style>

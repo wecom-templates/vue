@@ -1,11 +1,12 @@
 {
-  "name": "{{ name }}",
+  "name": "vue-component-demo",
   "version": "1.0.0",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
+  "description": "A Vue Component Project",
+  "author": "EGBDFACE 3212497319@qq.com ",
   "main": "index.js",
   "scripts": {
-    "build": "wecom build",
+    "build": "rm ./esm/* && wecom build",
+    "build:test": "wecom build",
     "serve": "wecom serve",
     "pub": "wecom pub <secret-key>",
     "start": "npm run serve"
@@ -20,12 +21,13 @@
     "css-loader": "^5.0.1",
     "eslint": "^7.14.0",
     "eslint-plugin-vue": "^7.1.0",
+    "mini-css-extract-plugin": "^1.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-vue": "^6.0.0",
     "style-loader": "^2.0.0",
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.9.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {

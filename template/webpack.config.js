@@ -1,5 +1,6 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -8,7 +9,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'esm'),
-    filename: 'component.js'
+    filename: 'component.[contenthash].js'
   },
 
   module: {
@@ -24,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
       }
     ]
   },
@@ -33,9 +34,12 @@ module.exports = {
     extensions: ['.js', '.vue']
   },
   
-  devtool: 'eval-source-map',
+  // devtool: 'eval-source-map',
 
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'main.[contenthash].css'
+    })
   ]
 }
